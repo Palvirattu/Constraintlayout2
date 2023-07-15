@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        android:id="@+id/barrier"
+        app:constraint_referenced_ids="tvcamera,tvj"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".3"
+        android:id="@+id/hfirst"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".5"
+        android:orientation="horizontal"
+        android:id="@+id/hsecond"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent=".85"
+        android:id="@+id/hthird"
+        android:orientation="horizontal"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent=".89"
+        android:orientation="horizontal"
+        android:id="@+id/hfourth"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".97"
+        android:id="@+id/hlast"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/Jalandhar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/hfirst"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Jalandhar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".0"
+        app:layout_constraintVertical_bias=".33"
+        android:id="@+id/tvj"/>
+    <TextView
+        android:id="@+id/tvcamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Camera"
+        app:layout_constraintTop_toBottomOf="@+id/tvj"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/hsecond"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintHorizontal_bias=".1"
+        tools:ignore="UnknownId" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setting"
+        app:layout_constraintTop_toBottomOf="@+id/tvcamera"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/hsecond"
+        app:layout_constraintHorizontal_bias=".0"
+        app:layout_constraintVertical_bias=".1"
+        android:id="@+id/tvsetting"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hfirst"
+        app:layout_constraintStart_toEndOf="@id/tvcamera"
+        app:layout_constraintStart_toStartOf="@+id/barrier"
+        app:layout_constraintHorizontal_bias=".1"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvcamera"
+        android:hint="Camera type"
+        android:textSize="30sp"
+        android:id="@+id/etcamera2"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Setting type"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hfirst"
+        app:layout_constraintStart_toEndOf="@+id/tvsetting"
+        app:layout_constraintBottom_toTopOf="@+id/hsecond"
+        app:layout_constraintStart_toStartOf="@+id/barrier"
+        app:layout_constraintHorizontal_bias=".2"
+        app:layout_constraintVertical_bias=".1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvsetting"/>
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/hsecond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/hthird"
+        tools:ignore="MissingClass">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jalandhar is a city in the state of Punjab in India. With a considerable population, it ranks as the third most-populous city in the state and is the largest city in the Doaba region. Jalandhar lies alongside the historical Grand Trunk Road and is a well-connected junction for both rail and road networks. The city is located 148 km (92 mi) northwest of the state capital Chandigarh, 83.5 km (51.9 mi) southeast of the city of Amritsar, and 61.3 km (38.1 mi) north of Ludhiana. The national capital, Delhi, is approximately 381 km (237 mi). The National Highway 1 (NH1), crosses Jalandhar, further enhancing its connectivity."
+            android:textSize="18sp"
+            tools:ignore="MissingClass"/>
+    </ScrollView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/hfourth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/hlast"
+        android:text="Yes"
+        android:id="@+id/btnone"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/hfourth"
+        app:layout_constraintStart_toEndOf="@+id/btnone"
+        app:layout_constraintBottom_toBottomOf="@+id/hlast"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="No"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
